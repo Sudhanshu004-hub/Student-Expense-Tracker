@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>💰 Student Expense Tracker</h1>
+    <p>Track your daily spending and stay on budget</p>
+  </header>
+
+  <div class="container">
+
+    
+    <div class="card total-card">
+      <div>
+        <span id="totalLabel">Total Expenses</span>
+        <h2>₹<span id="total">0</span></h2>
+      </div>
+      <div class="icon">📊</div>
+    </div>
+
+    
+    <div class="card">
+      <h3>Add New Expense</h3>
+      <div class="form-grid">
+        <input type="text" id="name" placeholder="Expense name">
+        <input type="number" id="amount" placeholder="Amount (₹)">
+        <select id="category" class="full">
+          <option>Food</option>
+          <option>Travel</option>
+          <option>Shopping</option>
+          <option>Education</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <button id="addBtn" onclick="addExpense()">Add Expense</button>
+      <p id="error"></p>
+    </div>
+
+    
+    <div class="card">
+      <div class="list-header">
+        <h3>Your Expenses</h3>
+        <select id="filter" onchange="showExpenses()">
+          <option>All</option>
+          <option>Food</option>
+          <option>Travel</option>
+          <option>Shopping</option>
+          <option>Education</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div id="list"></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
